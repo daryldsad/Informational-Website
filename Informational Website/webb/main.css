@@ -1,0 +1,367 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-family: "Poppins", sans-serif;
+    --color1: #0bdf4b ;
+    --color2: #181818 ;
+    margin: 20px 5% 0 5%;
+  justify-content: center;
+  padding: 20px;
+  background-color: gray;
+}
+
+main {
+  background-color: white;
+  height: fit-content;
+  width: 100% ;
+  padding: 30px ;
+}
+
+.logo {
+    background-color: #818181;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+   position: absolute;
+}
+
+.logo img{
+    width: 500px;
+}
+
+.textlogo{
+    margin-left: 120px;
+    color: #0bdf4b;
+}
+
+.textlogo span{
+    color: aqua;
+    margin-right: 5px;
+}
+
+.input-box textarea{
+  width: 40rem;
+  height: 5rem;
+}
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: relative;
+  background-color: var(--color2);
+  padding: 12px 20px;
+}
+.logo img {width: 100px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color1);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+}
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: orangered;
+  transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+  position: absolute;
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {display: none;}
+@media(max-width: 610px){
+  .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: var(--color2);
+      transition: all 0.2s ease-in-out;
+  }
+  .menu li {margin-top: 40px;}
+  .menu li a {padding: 10px;}
+  .open-menu , .close-menu {display: block;}
+  #check:checked ~ .menu {right: 0;}
+  body{margin: 0%;}
+  #search {height: 150%;}
+}
+
+#check {display: none;}
+@media(max-width: 1052px){
+  .menu {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 80%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 100;
+      background-color: var(--color2);
+      transition: all 0.2s ease-in-out;
+  }
+  .menu li {margin-top: 40px;}
+  .menu li a {padding: 10px;}
+  .open-menu , .close-menu {display: block;}
+  #check:checked ~ .menu {right: 0;}
+  body{margin: 0%;}
+  #search {height: 150%;}
+}
+
+
+/*Login and registration*/
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: rgb(166,166,166,0.4);
+  padding: 25px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 500;
+  text-align: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  color: black;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+
+label{
+  color: black;
+}
+
+label a{
+    text-decoration: none;
+    color: black;
+}
+label a:hover{
+    color: orangered;
+
+}
+
+.form .gender-box {
+    margin-top: 20px;
+  }
+  .gender-box h3 {
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+  .form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+  .form .gender {
+    column-gap: 5px;
+  }
+  .gender input {
+    accent-color: rgb(28, 32, 29);
+  }
+  .form :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+  .gender label {
+    color: black;
+  }
+
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(0,0,0,0.6);
+}
+.form button:hover {
+  background:orangered;
+}
+.form button a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
+
+/*footer*/
+/*footer*/
+.container-fluid{
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style: none;
+}
+
+li a{
+  text-decoration: none;
+}
+
+.footer{
+  background-color: var(--color2);
+  padding: 70px 0;
+  width: 100%;
+}
+
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4{
+  font-size: 1.4rem;
+  color: var(--color1);
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: var(--color1);
+  text-decoration: none;
+  font-weight: 300;
+  position: relative;
+  transition: 0.15s ease-in-out;
+}
+
+.footer-col ul li a::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: orangered;
+  transition: 0.15s ease-in-out;
+}
+
+.footer-col ul li a:hover:after{
+  width: 100%;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+  color: #0bdf4b;
+  background-color: #fff;
+}
+
+
+@media(max-width:774px){
+  main{
+    padding-top: 20px;
+  }
+   body{
+    padding: 0%;
+    margin: 0%;
+   }
+ 
+  }
+

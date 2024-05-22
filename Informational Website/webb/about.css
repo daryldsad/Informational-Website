@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.about h1{
+    margin-top: 30px;
+}
+.author{
+    font-size: 12px;
+}
+
+.main-card, .vid-card{
+    margin-top: 1rem;
+}
+
+.img-container{
+    display: flex;
+}
+
+.main-card img{
+    height: fit-content;
+    width: 900px;
+    
+}
+
+
+.news-card{
+    width: 24rem;
+    margin: 26px 0 0 24px;
+    background-color: bisque;
+    
+}
+
+.news-card img{
+    width: 24rem;
+}
+
+.news-title{
+    width: 24rem;
+    text-align: center;
+    margin-left: 24px;
+    background-color: bisque;
+
+}
+
+.card-text{
+    font-size: 14px;
+}
+
+.article{
+    padding-top: 1rem;
+
+}
+
+.article-text{
+    padding-top: 1rem;
+    margin-left: 3rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem auto;
+}
+button {
+    padding: 10px;
+    background-color:green;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color:  #50e69b;
+}
+
+.sub-card{
+    display: flex;
+    padding-bottom: 0.5rem;
+}
+
+.sub-card img{
+    height: fit-content;
+    width: 120px;
+    margin-right: 10px;
+    transition: transform .2s;
+}
+
+
+.sub-card img:hover{
+    transform: scale(1.5);
+}
+
